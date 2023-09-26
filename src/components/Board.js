@@ -9,7 +9,7 @@ const Board = () => {
 	const [currDir, setCurrDir] = useState("Left");
 	const [score, setScore] = useState(0);
 	const [speed, setSpeed] = useState(100);
-	const [high,setHigh] = useState(0);
+	const [high,setHigh] = useState(localStorage.getItem('score')===null? 0: localStorage.getItem('score'));
 	const dimension = 30;
 	let val = 1;
 	let movement;
