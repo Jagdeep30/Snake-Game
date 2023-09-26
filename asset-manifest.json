@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Snake-Game/static/css/main.d9661868.css",
+    "main.js": "/Snake-Game/static/js/main.13eaeaa8.js",
+    "static/js/787.786e9145.chunk.js": "/Snake-Game/static/js/787.786e9145.chunk.js",
+    "static/media/Background.png": "/Snake-Game/static/media/Background.55320adccda36f512421.png",
+    "static/media/frog2.png": "/Snake-Game/static/media/frog2.d99e9190872440832a4c.png",
+    "static/media/VerminVibesV-Zlg3.ttf": "/Snake-Game/static/media/VerminVibesV-Zlg3.580be6ac8bed0de0e212.ttf",
+    "index.html": "/Snake-Game/index.html",
+    "main.d9661868.css.map": "/Snake-Game/static/css/main.d9661868.css.map",
+    "main.13eaeaa8.js.map": "/Snake-Game/static/js/main.13eaeaa8.js.map",
+    "787.786e9145.chunk.js.map": "/Snake-Game/static/js/787.786e9145.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9661868.css",
+    "static/js/main.13eaeaa8.js"
+  ]
+}
