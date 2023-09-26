@@ -8,7 +8,8 @@ const Board = () => {
 	const [food, setFood] = useState(Math.floor(Math.random() * 400));
 	const [currDir, setCurrDir] = useState("Left");
 	const [score, setScore] = useState(0);
-	const [speed, setSpeed] = useState(200);
+	const [speed, setSpeed] = useState(100);
+	const [high,setHigh] = useState(0);
 	const dimension = 30;
 	let val = 1;
 	let movement;
@@ -127,6 +128,10 @@ const Board = () => {
 	const gameOver = (newHead) => {
 		if (snakeBody.includes(newHead)) {
 			alert("Game Over");
+			if(score>high){
+				localStorage.setItem("score",score);
+				setHigh(score);
+			}
 			reset();
 			return true;
 		}
@@ -208,7 +213,9 @@ const Board = () => {
 										<div
 											key={ind}
 											className={classNames}
-										></div>
+										>
+											{classNames.includes('food') && <div></div>}
+										</div>
 									);
 								})}
 							</div>
@@ -218,22 +225,25 @@ const Board = () => {
 
 				<div className="col-2"></div>
 
-				<div className="col-2 d-flex flex-column align-items-center info">
-					<h2 className="score mb-5">
+				<div className="col-3 d-flex flex-column align-items-center info">
+					<h2 className="high mb-4">
+						High Score:<span>{high}</span>
+					</h2>
+					<h2 className="score mb-4">
 						Score:<span>{score}</span>
 					</h2>
-					<button class="glowing-btn mb-4" onClick={reset}>
-						<span class="glowing-txt">RESET</span>
+					<button className="glowing-btn mb-3" onClick={reset}>
+						<span className="glowing-txt">RESET</span>
 					</button>
 					<select
 						name="speed"
 						id="speed"
 						onChange={setSnakeSpeed}
-						class="glowing-btn"
+						className="glowing-btn"
 					>
-						<option value="500">1x</option>
-						<option value="150">1.5x</option>
-						<option value="100">2x</option>
+						<option value="100">1x</option>
+						<option value="75">1.5x</option>
+						<option value="50">2x</option>
 					</select>
 				</div>
 			</div>

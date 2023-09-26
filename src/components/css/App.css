@@ -8,6 +8,8 @@
   height: 100vh;
   /* background: rgb(16, 5, 49); */
   background: #00ff89;
+  background: url("./../../resources/images/Background.png");
+  background-size: cover;
   color: #000000;
   font-family: 'Poppins', sans-serif;
 }
